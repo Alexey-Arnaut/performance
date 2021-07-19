@@ -1,0 +1,39 @@
+$color-blue: #5E81FE;
+$color-grey: #697CA6;
+$color-white: #FFFFFF;
+$color-red: #D43F3F;
+
+$primary-color: $color-blue;
+$secondary-color: $color-grey;
+$tertiary-color: $color-white;
+$quaternary-color: $color-red;
+
+@mixin button {
+    padding: 12px 18px;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 5px;
+}
+
+@mixin overhead {
+    color: $primary-color;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+@mixin title {
+    color: $primary-color;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 1.6em;
+}
+
+@mixin subtitle {
+    color: $secondary-color;
+    font-size: 16px;
+    line-height: 1.8em;
+    letter-spacing: 0.03em;
+    font-weight: 400;
+}

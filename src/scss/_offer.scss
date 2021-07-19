@@ -1,0 +1,83 @@
+.offer {
+    background: linear-gradient(180deg, #F4F7FF 0%, #F1F5FF 100%);
+}
+
+.offer__wrapper {
+    background-image: url(../img/offer/clouds.svg);
+    background-position: bottom top;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.offer__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 300px;
+}
+
+.offer__content-overhead {
+    z-index: 1;
+}
+
+.offer__content-title {
+    color: $primary-color;
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 1.4em;
+    z-index: 1;
+
+    span {
+        font-weight: 700;
+    }
+}
+
+.offer__content-subtitle {
+    max-width: 500px;
+    text-align: center;
+    margin-bottom: 20px;
+    z-index: 1;
+}
+
+.offer__content-button {
+    border-radius: 50%;
+    z-index: 1;
+
+    &:hover {
+
+        circle {
+            fill: $primary-color;
+        }
+        path {
+            fill: $tertiary-color;
+        }
+    }
+}
+
+.offer__chart {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.offer__chart-dot {
+    cursor: pointer;
+}
+
+.offer__chart-item {
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.offer__chart-item--active {
+    opacity: 1;
+}
