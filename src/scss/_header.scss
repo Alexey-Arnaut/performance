@@ -82,7 +82,6 @@
 .header__button {
     color: $primary-color;
     background: rgb($primary-color, 0.2);
-    transition: 0.5s;
 
     &:hover {
         color: $tertiary-color;

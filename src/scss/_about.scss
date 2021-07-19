@@ -1,7 +1,8 @@
-.about {
+.about__wrapper {
     background-image: url(../img/about/clouds.svg);
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
     min-height: 100vh;
     display: flex;
@@ -48,13 +49,9 @@
     line-height: 1.6em;
 }
 
-.about__button {
-}
-
 .about__button--read {
     background:  rgb($quaternary-color, 0.2);
     color: $quaternary-color;
-    transition: 0.5s;
 
     &:hover {
         background: $quaternary-color;
@@ -65,7 +62,6 @@
 .about__button--get {
     background: rgb($primary-color, 0.2);
     color: $primary-color;
-    transition: 0.5s;
 
     &:hover {
         background: $primary-color;
@@ -79,4 +75,53 @@
     font-size: 12px;
     margin: 0 50px;
     text-transform: uppercase;
+}
+
+.about__statistics {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about__statistics-item {
+    max-width: 50%;
+    width: 100%;
+    display: flex;  
+    flex-direction: column;
+    padding: 60px 90px;
+
+    &:first-child {
+        background: $primary-color;
+        justify-content: flex-end;
+        align-items: flex-end;
+        color: $tertiary-color;
+        
+        .about__statistics-text {
+            text-align: right;
+        }
+    }
+    &:last-child {
+        background: rgb($primary-color, 0.2);
+        align-items: flex-start;
+        color: $primary-color;
+
+        .about__statistics-text {
+            text-align: left;
+        }
+    }
+}
+
+.about__statistics-num {
+    padding: 25px 0;
+    font-size: 48px;
+    letter-spacing: 0.03em;
+}
+
+.about__statistics-text {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.6em;
+    letter-spacing: 0.03em;
+    max-width: 260px;
 }

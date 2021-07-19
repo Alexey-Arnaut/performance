@@ -7,8 +7,8 @@
     background-position: bottom top;
     background-size: cover;
     background-attachment: fixed;
-    min-height: 100vh;
     padding-top: 100px;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -56,6 +56,7 @@
         circle {
             fill: $primary-color;
         }
+
         path {
             fill: $tertiary-color;
         }
@@ -69,6 +70,12 @@
     bottom: 0;
 }
 
+.offer__chart-line {
+    stroke-dasharray: 2005;
+    stroke-dashoffset: 2005;
+    animation: animation-line 4s linear forwards;
+}
+
 .offer__chart-dot {
     cursor: pointer;
 }
@@ -80,4 +87,10 @@
 
 .offer__chart-item--active {
     opacity: 1;
+}
+
+@keyframes animation-line {
+    to {
+        stroke-dashoffset: 0;
+    }
 }
