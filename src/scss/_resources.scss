@@ -13,30 +13,41 @@
     margin-bottom: 100px;
 }
 
-.resources__slider {
+.resources__container {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+}
+
+.resources__slider {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
 }
 
 .resources__slider-line {
     position: relative;
+    left: 0;
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 0 100px;
+    max-width: 1100px;
+    width: 100%;
+    flex: 100%;
+    transition: 0.5s;
 }
 
 .resources__slider-item {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 1000px;
     background: $tertiary-color;
     padding: 65px 35px;
     border-radius: 5px;
     border: 1px solid $secondary-color;
+    max-width: 1000px;
+    margin: 0 50px;
+    flex: 100% 0 0;
 }
 
 .resources__slider-images {
@@ -81,21 +92,21 @@
     }
 }
 
-.img--yellow {
+.resources__slider-img--yellow {
 
     &::before {
         background: linear-gradient(13.46deg, rgba(255, 199, 53, 0.44) 1.89%, rgba(255, 227, 154, 0.93) 1.9%, rgba(255, 159, 90, 0) 68.24%)
     }
 }
 
-.img--blue {
+.resources__slider-img--blue {
 
     &::before {
         background: linear-gradient(27.48deg, rgba(255, 53, 53, 0.48) 14.02%, rgba(255, 179, 90, 0) 68%)
     }
 }
 
-.img--red {
+.resources__slider-img--red {
 
     &::before {
         background: linear-gradient(13.49deg, rgba(53, 170, 255, 0.68) 11.59%, rgba(90, 136, 255, 0) 96.88%)
@@ -172,8 +183,12 @@
 }
 
 .resources__slider-arrows {
+    max-width: 1200px;
+    margin: -100px auto 0;
+    padding: 0 15px;
     position: absolute;
-    width: 100%;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -190,8 +205,10 @@
 }
 
 .resources__slider-dots {
+    position: relative;
     display: flex;
-    margin-top: 100px;
+    left: 50%;
+    margin-left: -25px;
 }
 
 .resources__slider-dot {
@@ -200,6 +217,7 @@
     background: $secondary-color;
     margin-right: 10px;
     border-radius: 50%;
+    margin-top: 100px;
 
     &:last-child {
         margin-right: 0;

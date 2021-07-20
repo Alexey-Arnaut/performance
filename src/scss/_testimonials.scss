@@ -18,18 +18,21 @@
 .testimonials__slider {
     display: flex;
     flex-direction: column;
-    align-items: center;
     position: relative;
+    overflow: hidden;
+    padding-bottom: 80px;
 }
 
 .testimonials__slider-line {
+    position: relative;
     display: flex;
     max-width: 700px;
-    overflow: hidden;
+    transition: 0.5s;
+    flex: 100%;
+    left: 0;
 }
 
 .testimonials__slider-item {
-    min-width: 440px;
     background: $tertiary-color;
     display: flex;
     flex-direction: column;
@@ -40,6 +43,8 @@
     margin-right: 60px;
     margin-bottom: 30px;
     opacity: .5;
+    flex: 70% 0 0;
+    transition: 0.5s;
 }
 
 .testimonials__slider-item--active {
@@ -61,7 +66,8 @@
 .testimonials__slider-dots {
     display: flex;
     position: absolute;
-    bottom: -80px;
+    left: calc(15em - 2em);
+    bottom: 0;
 }
 
 .testimonials__slider-dot {
