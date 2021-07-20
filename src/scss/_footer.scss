@@ -1,0 +1,41 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 15px;
+}
+
+.footer__start {
+    display: flex;
+    align-items: center;
+}
+
+.footer__end {
+    display: flex;
+    align-items: center;
+}
+
+.footer__social-link {
+    margin-right: 40px;
+
+    &:last-child {
+        margin-right: 70px;
+    }
+
+    &:hover {
+
+        path {
+            fill: $primary-color;
+        }
+    }
+}
+
+.footer__button {
+    color: $primary-color;
+    background: rgb($primary-color, 0.2);
+
+    &:hover {
+        color: $tertiary-color;
+        background: $primary-color;
+    }
+}

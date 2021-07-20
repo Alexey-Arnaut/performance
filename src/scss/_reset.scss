@@ -343,6 +343,10 @@ svg {
     max-width: 100%;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 .wrapper {
     max-width: 1920px;
     margin: 0 auto;

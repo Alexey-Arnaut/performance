@@ -1,0 +1,93 @@
+.help {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 170px 0;
+}
+
+.help__title {
+    padding: 20px 0 70px;
+}
+
+.help__accordion {
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+    border-bottom: 1px solid #000;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.help__accordion--acitve {
+
+    .help__accordion-header {
+        color: $primary-color;
+
+        &::before {
+            background-image: url(../img/help/arrow-up.svg);
+        }
+    }
+
+    .help__accordion-content {
+        max-height: 300px;
+    }
+}
+
+.help__accordion-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    color: $secondary-color;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+
+    &::before {
+        position: absolute;
+        content: '';
+        width: 14px;
+        height: 7px;
+        background-image: url(../img/help/arrow-down.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        left: 0;
+        transition: 0.5s;
+    }
+}
+
+.help__accordion-content {
+    display: flex;
+    align-items: center;
+    padding: 0 15px 0 50px;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.help__accordion-text {
+    max-width: 400px;
+    width: 100%;
+    padding-right: 50px;
+    color: $secondary-color;
+    line-height: 1.6em;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+}
+
+.help__accordion-button {
+    color: $secondary-color;
+    background: rgb($secondary-color, 0.2);
+
+    &:hover {
+        color: $primary-color;
+        background: rgb($primary-color, 0.2);
+    }
+}

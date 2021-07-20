@@ -1,0 +1,60 @@
+.plan {
+    background: $primary-color;
+}
+
+.plan__wrapper {
+    background-image: url(../img/plan/clouds.svg);
+    background-position: bottom top;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 15px;
+}
+
+.plan__overhead {
+    color: $tertiary-color;
+}
+
+.plan__title {
+    color: $tertiary-color;
+    font-weight: 400;
+    padding: 20px 0 30px;
+
+    span {
+        font-weight: 500;
+    }
+}
+
+.plan__subtitle {
+    max-width: 700px;
+    text-align: center;
+    color: $tertiary-color;
+    
+}
+
+.plan__buttons {
+    margin-top: 30px;
+}
+
+.plan__button--view {
+    background: $tertiary-color;
+    color: $primary-color;
+    margin-right: 10px;
+
+    &:hover {
+        background: $quaternary-color;
+        color: $tertiary-color;
+    }
+}
+
+.plan__button--read {
+    color: $tertiary-color;
+
+    &:hover {
+        background: $tertiary-color;
+        color: $primary-color;
+    }
+}
