@@ -85,3 +85,45 @@
 .testimonials__slider-dot--active {
     background: $primary-color;
 }
+
+@media (max-width: 1200px) {
+    
+    .testimonials__wrapper {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .testimonials__content {
+        margin-right: 0;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    .testimonials__slider-dots {
+        left: 50%;
+        margin-left: -39px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .testimonials__slider-line {
+        max-width: 400px;
+    }
+
+    .testimonials__slider-item {
+        flex: 100% 0 0;
+    }
+
+    .testimonials__slider-content {
+        padding: 20px 20px 0;
+    }
+}
+
+@media (max-width: 425px) {
+
+    .testimonials__slider-line {
+        max-width: 300px;
+    }
+}

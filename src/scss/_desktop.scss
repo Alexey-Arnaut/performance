@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 60px 0;
+    padding: 60px 15px;
 }
 
 .desktop__logos-item {
@@ -65,5 +65,59 @@
     &:hover {
         color: $tertiary-color;
         background: $primary-color;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .desktop__content {
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .desktop__logos {
+        flex-wrap: wrap;
+    }
+
+    .desktop__logos-item {
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+
+    .desktop__container {
+        flex-direction: column;
+    }
+
+    .desktop__content {
+        margin-right: 0;
+        margin-bottom: 50px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .desktop__content-buttons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 500px) {
+    
+    .desktop__logos {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 15px;
+    }
+
+    .desktop__logos-item {
+        margin-right: 0;
+        margin-bottom: 30px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 }

@@ -46,3 +46,28 @@
     color: $tertiary-color;
     padding: 20px 60px;
 }
+
+@media (max-width: 1024px) {
+    
+    .newsletter__wrapper {
+        flex-direction: column;
+    }
+
+    .newsletter__content {
+        margin-right: 0;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 550px) {
+    
+    .newsletter__form {
+        flex-direction: column;
+    }
+
+    .newsletter__form-field {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}

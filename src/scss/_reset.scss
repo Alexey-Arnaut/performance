@@ -132,15 +132,6 @@ table {
     border-spacing: 0;
 }
 
-html {
-    line-height: 1.15;
-    -webkit-text-size-adjust: 100%;
-}
-
-body {
-    margin: 0;
-}
-
 main {
     display: block;
 }
@@ -201,10 +192,6 @@ sub {
 
 sup {
     top: -0.5em;
-}
-
-img {
-    border-style: none;
 }
 
 button,
@@ -325,7 +312,16 @@ a {
 }
 
 body {
+    margin: 0;
     font-family: 'Quicksand', serif;
+    overflow-x: hidden;
+}
+
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    width: 100%;
+    max-width: 100%;
     overflow-x: hidden;
 }
 
@@ -336,6 +332,7 @@ circle {
 
 img {
     pointer-events: none;
+    border-style: none;
 }
 
 img,
@@ -366,4 +363,15 @@ svg {
 
 .subtitle {
     @include subtitle;
+}
+
+@media (max-width: 425px) {
+
+    .title {
+        font-size: 30px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
 }

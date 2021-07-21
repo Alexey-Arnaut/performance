@@ -112,7 +112,6 @@ function sliderTestimonials() {
             let slideId = SliderDot.getAttribute('data-slider');
             let currentItem = document.querySelector(slideId);
 
-
             SliderDots.forEach(SliderDot => {
                 SliderDot.classList.remove('testimonials__slider-dot--active');
             });
@@ -125,7 +124,6 @@ function sliderTestimonials() {
             currentItem.classList.add('testimonials__slider-item--active');
 
             sliderLine.style.left = -currentItem.offsetLeft + 'px';
-
         });
     });
 };
@@ -150,6 +148,7 @@ function navigation() {
             menu.classList.remove('header__menu--active');
             header.classList.remove('header--active');
             body.style.overflow = 'visible';
+            body.style.overflowX = 'hidden';
         });
     });
 
@@ -164,17 +163,28 @@ function navigation() {
     menu.addEventListener('click', () => {
         menu.classList.toggle('header__menu--active');
         header.classList.toggle('header--active');
-        
-        if(menu.classList.contains('header__menu--active')) {
+
+        if (menu.classList.contains('header__menu--active')) {
             body.style.overflow = 'hidden';
         } else {
             body.style.overflow = 'visible';
+            body.style.overflowX = 'hidden';
         };
     });
 };
 
 function accordion() {
+    const accordionItems = document.querySelectorAll('.help__accordion');
 
+    accordionItems.forEach(accordionItem => {
+
+        accordionItem.addEventListener('click', () => {
+            accordionItems.forEach(accordionItem => {
+                accordionItem.classList.remove('help__accordion--acitve');
+            });
+            accordionItem.classList.add('help__accordion--acitve');
+        })
+    });
 };
 
 showSvg();
@@ -182,3 +192,4 @@ navigation();
 sliderOffer();
 sliderResources();
 sliderTestimonials();
+accordion();

@@ -58,3 +58,16 @@
         color: $primary-color;
     }
 }
+
+@media (max-width: 375px) {
+    
+    .plan__buttons {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .plan__button--view {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
